@@ -1,0 +1,50 @@
+<div class="card" style="width: 500px;margin: 100px auto;padding: 10px;">
+    <div class="font-monospace fs-1 fw-bold" style="text-align: center; padding: 20px 0px 10px;">
+        Sign Up
+    </div>
+    
+    <form (ngSubmit)="onSignUp()"
+    style="width: 400px; margin: auto;">
+
+    <div class="form-group">
+      <label></label>
+      <input [(ngModel)]="user.email" type="email" name="email" class="form-control"
+      id="email" placeholder="Email" style="padding-bottom: 10px">
+      
+      <label></label>
+      <input [(ngModel)]="user.username" type="text" name="username" class="form-control" 
+      id="username"  placeholder="User Name" style="padding-bottom: 10px">
+      
+      <label></label>
+      <input [(ngModel)]="user.mobileno" type="text" name="mobileno" class="form-control" 
+      id="mobileno" placeholder="Mobile Number" style="padding-bottom: 10px">
+
+      <label></label>
+      <input [(ngModel)]="user.password" type="password" name="password" class="form-control" 
+      id="password" placeholder="Password" style="padding-bottom: 10px">
+      
+      <label></label>
+      <input [(ngModel)]="user.password" type="password" name="password" class="form-control" 
+      id="password" placeholder="Confirm Password" style="padding-bottom: 10px">
+
+      <label></label>
+      <select [(ngModel)]="user.role"
+      class="d-block w-100 p-2" name="cars" id="cars">
+      <option value="Dog Owner">Dog Owner</option>
+      <option value="Trainer">Trainer</option>
+      <option value="Admin">Admin</option>
+      </select>
+    </div>
+
+    <div>
+    <div style="margin: 20px auto;text-align: center;">
+      <button type="submit" routerLink="/dogOwnerHomeScreen" class="btn btn-primary w-100 m-auto" 
+      style="padding: auto;">Sign Up</button>
+
+    </div>
+    <a class="d-block text-center mb-2"  routerLink="/login">Already have an account?sign in</a>
+    <a class="d-block text-center"  routerLink="/admin">Admin-Login</a>
+
+</div>
+  
+  
